@@ -22,7 +22,24 @@ PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
 # init scripts
 PRODUCT_PACKAGES += \
-    init.halium.rc
+    init.halium.rc \
+    vndk-detect
+
+# Support for the O devices
+PRODUCT_COPY_FILES += \
+    build/make/target/product/vndk/init.gsi.rc:system/etc/init/init.gsi.rc \
+    build/make/target/product/vndk/init.vndk-27.rc:system/etc/init/gsi/init.vndk-27.rc \
+    $(LOCAL_PATH)/configs/ld.config.26.txt:system/etc/ld.config.26.txt
+
+PRODUCT_PACKAGES += \
+    init.vndk-26.rc \
+    ld.config.27.txt \
+    llndk.libraries.27.txt \
+    vndksp.libraries.27.txt
+
+# Name space configuration file for non-enforcing VNDK
+PRODUCT_PACKAGES += \
+    ld.config.vndk_lite.txt
 
 # Test tools
 PRODUCT_PACKAGES += \

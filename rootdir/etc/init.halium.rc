@@ -25,3 +25,5 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on init
+    exec - root -- /system/bin/vndk-detect
