@@ -17,6 +17,9 @@
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 
+# Enable dynamic partition size
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
+
 # init scripts
 PRODUCT_PACKAGES += \
     init.halium.rc
