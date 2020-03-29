@@ -27,3 +27,6 @@
 
 on init
     exec - root -- /system/bin/vndk-detect
+
+on post-fs-data
+    exec - root -- /system/bin/on-post-data.sh

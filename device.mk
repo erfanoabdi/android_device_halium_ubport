@@ -23,7 +23,8 @@ PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 # init scripts
 PRODUCT_PACKAGES += \
     init.halium.rc \
-    vndk-detect
+    vndk-detect \
+    on-post-data.sh
 
 # Support for the O devices
 PRODUCT_COPY_FILES += \
