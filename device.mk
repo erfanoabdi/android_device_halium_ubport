@@ -72,3 +72,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbiometry_fp_api \
     libubuntu_application_api
+
+PRODUCT_PACKAGES += \
+    sensorservice
