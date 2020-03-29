@@ -46,3 +46,8 @@ PRODUCT_PACKAGES += \
     minimediaservice \
     minisfservice \
     miniafservice
+
+# Ubuntu
+PRODUCT_PACKAGES += \
+    libbiometry_fp_api \
+    libubuntu_application_api
