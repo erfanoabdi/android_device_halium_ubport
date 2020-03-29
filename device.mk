@@ -25,3 +25,24 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootctl \
     vintf
+
+# Misc
+PRODUCT_PACKAGES += \
+    libion
+
+# Media
+PRODUCT_PACKAGES += \
+    libmedia_omx \
+    android.frameworks.displayservice@1.0
+
+# Hybris compat libs
+PRODUCT_PACKAGES += \
+    libmedia_compat_layer \
+    libui_compat_layer
+
+# Droidmedia
+PRODUCT_PACKAGES += \
+    libdroidmedia \
+    minimediaservice \
+    minisfservice \
+    miniafservice
