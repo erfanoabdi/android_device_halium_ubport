@@ -30,3 +30,8 @@ on init
 
 on post-fs-data
     exec - root -- /system/bin/on-post-data.sh
+
+on property:init.svc.wcnss-service=running
+    write /dev/wcnss_wlan 1
+    write /sys/module/wlan/parameters/fwpath sta
+    write /sys/module/hci_smd/parameters/hcismd_set 1
