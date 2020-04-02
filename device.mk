@@ -22,6 +22,7 @@ PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
 # init scripts
 PRODUCT_PACKAGES += \
+    init.disabled.rc \
     init.halium.rc \
     vndk-detect \
     on-post-data.sh
