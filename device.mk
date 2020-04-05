@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ld.config.vndk_lite.txt
 
+# SPL fix
+PRODUCT_PACKAGES += \
+    getSPL
+
 # Test tools
 PRODUCT_PACKAGES += \
     bootctl \
