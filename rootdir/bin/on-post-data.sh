@@ -1,5 +1,8 @@
 #!/system/bin/sh
 
+PATH="/sbin:/vendor/sbin:/vendor/bin:/vendor/xbin:$PATH"
+export PATH
+
 fixSPL() {
     if [ "$(getprop ro.product.cpu.abi)" = "armeabi-v7a" ]; then
         setprop ro.keymaster.mod 'AOSP on ARM32'
