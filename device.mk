@@ -54,7 +54,9 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    libion
+    libdrm \
+    libion \
+    vendor.display.config@1.7
 
 # Media
 PRODUCT_PACKAGES += \
