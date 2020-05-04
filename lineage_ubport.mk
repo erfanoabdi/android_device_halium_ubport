@@ -27,6 +27,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
 # Inherit device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Inherit fonts
+$(call inherit-product-if-exists, frameworks/base/data/fonts/fonts.mk)
+
 PRODUCT_BRAND := halium
 PRODUCT_DEVICE := ubport
 PRODUCT_MANUFACTURER := halium
