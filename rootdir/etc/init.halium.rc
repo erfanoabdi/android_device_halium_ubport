@@ -30,6 +30,7 @@ on init
 
 on post-fs-data
     exec - root -- /system/bin/on-post-data.sh
+    mkdir /data/vendor_de/fpdata 0700 system system
 
 on property:init.svc.wcnss-service=running
     write /dev/wcnss_wlan 1
