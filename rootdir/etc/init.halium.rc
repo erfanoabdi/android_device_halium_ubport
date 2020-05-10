@@ -30,7 +30,12 @@ on init
 
 on post-fs-data
     exec - root -- /system/bin/on-post-data.sh
-    mkdir /data/vendor_de/fpdata 0700 system system
+    mkdir /data/vendor_de/0 0700 system system
+    mkdir /data/vendor_de/0/fpdata 0700 system system
+    chown system system /data/system
+    mkdir /data/system/users 0755 system system
+    mkdir /data/system/users/0 0700 system system
+    mkdir /data/system/users/0/fpdata 0700 system system
 
 on property:sys.boot_completed=1
     write /sys/module/wlan/parameters/fwpath sta
