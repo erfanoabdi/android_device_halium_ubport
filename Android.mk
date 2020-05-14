@@ -12,9 +12,14 @@ LOCAL_CFLAGS += \
 
 LOCAL_SRC_FILES += \
     KeyBuffer.cpp \
-    Keymaster4.cpp
+    Keymaster4.cpp \
+    main.cpp
+
 LOCAL_SHARED_LIBRARIES += \
     android.hardware.keymaster@4.0 \
-    libkeymaster4support
+    libbinder \
+    libhidlbase \
+    libkeymaster4support \
+    libutils
 
 include $(BUILD_EXECUTABLE)
