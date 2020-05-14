@@ -1,0 +1,5 @@
+service fake_crypt /system/bin/fake_crypt
+    class hal
+    user system
+    group system drmrpc
+    oneshot
