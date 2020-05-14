@@ -91,3 +91,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     sensorservice
+
+# Fake encryption for keymaster4
+PRODUCT_PACKAGES += \
+    fake_crypt
