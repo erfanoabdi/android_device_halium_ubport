@@ -10,7 +10,9 @@ LOCAL_CFLAGS += \
     -Wno-unused-parameter \
     -Wno-comment
 
-LOCAL_SRC_FILES += Keymaster4.cpp
+LOCAL_SRC_FILES += \
+    KeyBuffer.cpp \
+    Keymaster4.cpp
 LOCAL_SHARED_LIBRARIES += \
     android.hardware.keymaster@4.0 \
     libkeymaster4support
