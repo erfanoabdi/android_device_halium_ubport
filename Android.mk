@@ -4,6 +4,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := fake_crypt
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_INIT_RC := fake_crypt.rc
 LOCAL_CFLAGS += \
     -Wno-unused-variable \
     -Wno-sign-compare \
