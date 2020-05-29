@@ -1,21 +1,31 @@
-cc_library_shared {
-    // FIXME: this should only be -impl for a passthrough hal.
-    // In most cases, to convert this to a binderized implementation, you should:
-    // - change '-impl' to '-service' here and make it a cc_binary instead of a
-    //   cc_library_shared.
-    // - add a *.rc file for this module.
-    // - delete HIDL_FETCH_I* functions.
-    // - call configureRpcThreadpool and registerAsService on the instance.
-    // You may also want to append '-impl/-service' with a specific identifier like
-    // '-vendor' or '-<hardware identifier>' etc to distinguish it.
-    name: "android.system.net.netd@1.1-impl",
-    owner: "halium",
+//
+// Copyright 2020 UBports foundation
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation; version 3.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+// Author: Erfan Abdi <erfanplus@gmail.com>
+
+cc_binary {
+    name: "android.system.net.netd@1.1-service.stub",
+    defaults: ["hidl_defaults"],
     relative_install_path: "hw",
-    proprietary: true,
+    init_rc: ["android.system.net.netd@1.1-service.rc"],
     srcs: [
         "Netd.cpp",
+        "service.cpp"
     ],
     shared_libs: [
+        "libbase",
         "libhidlbase",
         "libhidltransport",
         "libutils",
