@@ -5,10 +5,20 @@
 
 service lmkd lmkd_HYBRIS_DISABLED
     disabled
+    oneshot
     override
+
 service vendor.imsdatadaemon imsdatadaemon_HYBRIS_DISABLED
     disabled
+    oneshot
     override
+
 service vendor.ims_rtp_daemon ims_rtp_daemon_HYBRIS_DISABLED
     disabled
+    oneshot
+    override
+
+service vendor.audio-hal-2-0 android.hardware.audio@2.0-service_HYBRIS_DISABLED
+    disabled
+    oneshot
     override
