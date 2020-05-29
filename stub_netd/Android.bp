@@ -1,0 +1,35 @@
+//
+// Copyright 2020 UBports foundation
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation; version 3.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+// Author: Erfan Abdi <erfanplus@gmail.com>
+
+cc_binary {
+    name: "android.system.net.netd@1.1-service.stub",
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    init_rc: ["android.system.net.netd@1.1-service.rc"],
+    srcs: [
+        "Netd.cpp",
+        "service.cpp"
+    ],
+    shared_libs: [
+        "libbase",
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "android.system.net.netd@1.1",
+        "android.system.net.netd@1.0",
+    ],
+}

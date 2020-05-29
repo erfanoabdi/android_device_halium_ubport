@@ -1,0 +1,4 @@
+service netd-hal-1-1-stub /system/bin/hw/android.system.net.netd@1.1-service.stub
+    class hal
+    user system
+    group system
