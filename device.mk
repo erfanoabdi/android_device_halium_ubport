@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
     mediadrmserver \
     mediaextractor
 
+# Netd
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1-service.stub
+
 # Hybris compat libs
 PRODUCT_PACKAGES += \
     libmedia_compat_layer \
