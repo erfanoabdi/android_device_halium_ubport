@@ -38,4 +38,5 @@ on post-fs-data
     mkdir /data/system/users/0/fpdata 0700 system system
 
 on property:sys.boot_completed=1
+    write /dev/wcnss_wlan 1
     write /sys/module/wlan/parameters/fwpath sta
