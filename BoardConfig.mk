@@ -20,5 +20,8 @@ DEVICE_PATH := device/halium/ubport
 
 include build/make/target/board/generic_arm64_ab/BoardConfig.mk
 
+# Ramdisk
+BOARD_ROOT_EXTRA_FOLDERS += efs
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
