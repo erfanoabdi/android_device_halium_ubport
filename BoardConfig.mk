@@ -18,7 +18,9 @@ BOARD_VENDOR := halium
 
 DEVICE_PATH := device/halium/ubport
 
-include build/make/target/board/generic_arm64_ab/BoardConfig.mk
+include build/make/target/board/generic_arm_ab/BoardConfig.mk
+
+TARGET_USES_64_BIT_BINDER := true
 
 # Ramdisk
 BOARD_ROOT_EXTRA_FOLDERS += efs
